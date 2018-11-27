@@ -178,6 +178,10 @@ input[type=number]::-webkit-outer-spin-button {
     -moz-transition: all 1.0s ease;
     -o-transition: all 1.0s ease;
     transition: all 1.0s ease;	
+    border-style: solid;
+    border-bottom-color: #297FCA;
+    border-width: 0;
+    border-bottom-width: 2px;
 }
 
 #notification.hide {
