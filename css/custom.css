@@ -20,9 +20,6 @@
     z-index: 1000;
 }
 
-.fixed-navbar-notification {
-    top: 30px;
-}
 
 .mobile-navbar {
 	display:none;
@@ -167,14 +164,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* Notification */
-.notification {
+#notification {
 	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 1002;
 	background-color: #3fa2f7;
 	color: #e3f1fd;
-	height: 30px;
+	height: 50px;
+	padding: 10px;
 	text-align: center;
 	-webkit-transition: all 1.0s ease;
     -moz-transition: all 1.0s ease;
@@ -182,6 +180,17 @@ input[type=number]::-webkit-outer-spin-button {
     transition: all 1.0s ease;	
 }
 
-.notification.hide {
+#notification.hide {
 	display: none;
+}
+
+#notification.show {
+	display: block;
+}
+
+@media (max-width: 992px) {
+  #notification {
+    height: 30px;
+    padding: 3px;
+  }
 }

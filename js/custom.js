@@ -16,7 +16,8 @@ function scrollFunction() {
   var notification = document.getElementById("notification")
   if (notification) {
 	  var navbar = document.getElementById("navbar")
-	  navbar.classList.add("fixed-navbar-notification")
+	  var h = document.getElementById('notification').clientHeight;
+	  navbar.style.top = h + "px"
   }
 
 $( document ).ready(function() {
