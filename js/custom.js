@@ -35,17 +35,20 @@ $( document ).ready(function() {
 		var minValue = parseInt(input.attr('min'))
 		var stepValue = parseInt(input.attr('step'))
 		
-		if (value > minValue) {
-			if (direction == 'up') {
-				input.val(value + stepValue)
-			}
-	
-			if (direction == 'down') {
-				input.val(value - stepValue)
-			}
-		} else {
-			input.val(minValue)
+		if (direction == 'up') {
+			value = value + stepValue
 		}
+
+		if (direction == 'down') {
+			value = value - stepValue
+		}
+		
+		if (value < minValue) {
+			value = minValue
+		}
+		
+		input.val(value)
+
 		
 	});
 
